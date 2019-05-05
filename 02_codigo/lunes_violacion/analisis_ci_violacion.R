@@ -19,7 +19,8 @@ datos_delito %>%
   labs(title = str_wrap(str_to_upper(str_c("número de carpetas de investigación por", unique(datos_delito$categoria_de_delito), " iniciadas en cada día de la semana", sep = "")), width = 60),
        subtitle = "Datos de enero de 2016 al 31 de marzo de 2019",
        x = NULL,
-       y = NULL) +
+       y = NULL,
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40") +
   tema +
   theme(axis.text.y = element_blank(), 
         panel.grid = element_blank()) + 
@@ -50,7 +51,7 @@ datos_delito %>%
        subtitle = "Datos de enero de 2016 al 31 de marzo de 2019",
        x = "\nDías del año transcurridos",
        y = "Número de carpetas informativas\n", 
-       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.") +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40") +
   tema +
   theme(legend.position = "none") + 
   ggsave(str_c("03_graficas/lunes_violacion/02_frecuencia_ci_acumulada_diariamente_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 12, height = 8, dpi = 200)
@@ -86,7 +87,7 @@ datos_delito %>%
        subtitle = "Tasa por cada 100 mil habitantes",
        x = "\n",
        y = "Tasa mensual anualizada\n", 
-       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México y proyecciones poblacionales de CONAPO.") +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la CDMX y proyecciones poblacionales de CONAPO.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
   theme(legend.position = "none") + 
   ggsave(str_c("03_graficas/lunes_violacion/03_tasa_mensual_anualizada_de_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 12, height = 8, dpi = 200) 
@@ -111,7 +112,7 @@ datos_delito %>%
        subtitle = "Tasa por cada 100 mil habitantes",
        x = NULL,
        y = NULL,
-       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México y proyecciones poblacionales de CONAPO.") +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México y proyecciones poblacionales de CONAPO.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
   theme(axis.text.y = element_blank(), 
         panel.grid = element_blank()) + 
@@ -153,7 +154,7 @@ cambio_num_acumulado_delitos_alcaldia %>%
        subtitle = str_wrap("La gráfica muestra el cambio en el número de carpetas de investigación acumuladas en el primer trimestre de cada año", width = 95),
        x = NULL,
        y = "Número acumulado de\ncarpetas de investigación\n",
-       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.") +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
   theme(panel.grid.major.x = element_blank(),
         legend.position = "none") + 
@@ -181,7 +182,7 @@ cambio_num_acumulado_delitos_alcaldia %>%
        subtitle = str_wrap("La gráfica muestra el cambio absoluto en el número de carpetas de investigación acumuladas en el primer trimestre de cada año", width = 85),
        x = NULL,
        y = "\nCambio en el número de carpetas de investigación\n",
-       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.") +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
   theme(panel.grid.major.x = element_blank(),
         legend.position = "none",
@@ -224,7 +225,7 @@ datos_delito %>%
        subtitle = "Tasa por cada 100 mil habitantes",
        x = NULL,
        y = "Tasa trimestral anualizada\n",
-       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México y el Anuario estadístico y geográfico de la\nCiudad de México 2017 del INEGI y la CDMX.") +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México y el Anuario estadístico y geográfico\nde la Ciudad de México 2017 del INEGI y la CDMX.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
   theme(panel.grid.major.x = element_blank(),
         legend.position = "none") + 
@@ -280,7 +281,7 @@ bd_cdmx %>%
        subtitle = str_wrap("Carpetas de investigación acumuladas entre el 1 enero de 2016 y el 31 de marzo de 2019", width = 95),
        x = NULL,
        y = "Porcentaje del total, por categoría de delito",
-       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.") +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
   theme(legend.position = "none", 
         panel.grid.major = element_blank(),
@@ -316,7 +317,7 @@ datos_delito %>%
        subtitle = str_wrap("Carpetas de investigación acumuladas entre el 1 enero de 2016 y el 31 de marzo de 2019", width = 90),
        x = NULL,
        y = "Número de carpetas\n",
-       caption = str_wrap("\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México ", width = 130)) +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40") +
   tema +
   theme(axis.text.x = element_blank(),
         panel.grid.major = element_blank()) +
@@ -353,7 +354,7 @@ datos_delito %>%
        subtitle = str_wrap("Carpetas de investigación acumuladas entre el 1 enero de 2016 y el 31 de marzo de 2019", width = 90),
        x = NULL,
        y = "Tasa de carpetas por\ncada 100 mil habitantes\n",
-       caption = str_wrap("\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México y el Anuario estadístico y geográfico de la Ciudad de México 2017 del INEGI y la CDMX.", width = 130)) +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México y el Anuario\nestadístico y geográfico de la Ciudad de México 2017 del INEGI y la CDMX.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40") +
   tema +
   theme(axis.text.x = element_blank(),
         panel.grid.major = element_blank()) +
@@ -401,7 +402,7 @@ top_20_colonias_por_delito %>%
        subtitle = str_wrap(paste("Estas 20 colonias concentran el ", round(max(top_20_colonias_por_delito$por_acumulado_carpetas), 1), "% (", comma(max(top_20_colonias_por_delito$num_acumulado_carpetas)), ") de las ", comma(max(top_20_colonias_por_delito$num_total_carpetas)), " carpetas de investigación iniciadas por este delito entre el 1 de enero de 2016 y el 31 de marzo de 2019"  , sep = ""), width = 110), 
        x = NULL,
        y = NULL, 
-       caption = str_wrap("Fuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México", width = 120)) +
+       caption = "Fuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   coord_flip() +
   tema +
   theme(panel.grid.major = element_blank(),
@@ -451,7 +452,7 @@ faa %>%
   labs(title = str_wrap(faa$titulo, width = 65),
        subtitle = "Datos de enero de 2016 al 31 de marzo de 2019",
        fill = "Núm. de carpetas\nde investigación",
-       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la Procuraduría General de Justicia de la Ciudad de México") +
+       caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la Procuraduría General de Justicia de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
   theme(panel.grid.major=element_line(colour = "transparent"),
         axis.text = element_blank(),
