@@ -6,7 +6,7 @@ Los resultados de este análisis fueron uno de los insumos que utilizó el equip
 
 Cada día de la semana del 6 al 11 de mayor iré subiendo el código y las gráficas relacionadas con los reportajes aparecidos ese día. El domingo 12 de mayo subiré un par de scripts que permiten generar reportes uniformes para cada tipo de categoría de delito.
 
-Las fuentes de los datos usados son:
+Dado el tamaño de muchos de los archivos usados en el análisis, no pude incluirlos en el repositorio. Sin embargo, puedes descargarlos de las siguientes ligas:
 
 **ADIP** 
 
