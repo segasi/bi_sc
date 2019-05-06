@@ -16,7 +16,7 @@ datos_delito %>%
   geom_text(aes(label = comma(n)), color = "white", vjust = 1.5, fontface = "bold") +
   scale_x_continuous(breaks = 1:7, labels = c("Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom")) +
   scale_y_continuous(labels = comma) +
-  labs(title = str_wrap(str_to_upper(str_c("número de carpetas de investigación por", unique(datos_delito$categoria_de_delito), " iniciadas en cada día de la semana", sep = "")), width = 60),
+  labs(title = str_wrap(str_to_upper(str_c("número de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), " iniciadas en cada día de la semana", sep = "")), width = 100),
        subtitle = "Datos de enero de 2016 al 31 de marzo de 2019",
        x = NULL,
        y = NULL,
@@ -47,7 +47,7 @@ datos_delito %>%
   scale_x_continuous(breaks = c(1, seq(30, 360, 30)), limits = c(0, 380)) +
   scale_y_continuous(label = comma) +
   scale_color_manual(values = c("grey70", "#a50300")) +
-  labs(title = str_wrap(str_to_upper(str_c("número de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", acumulado diariamente en la ciudad de méxico", paste = "")), width = 55),
+  labs(title = str_wrap(str_to_upper(str_c("número de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", acumulado diariamente en la ciudad de méxico", paste = "")), width = 80),
        subtitle = "Datos de enero de 2016 al 31 de marzo de 2019",
        x = "\nDías del año transcurridos",
        y = "Número de carpetas de investigación\n", 
@@ -83,7 +83,7 @@ datos_delito %>%
   scale_x_continuous(limits = c(1, 12.5), breaks = 1:12, labels = c("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic")) +
   # scale_y_continuous(label = comma) +
   scale_color_manual(values = c("grey70", "#a50300")) +
-  labs(title = str_wrap(str_to_upper(str_c("tasa mensual anualizada de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", en la ciudad de méxico", paste = "")), width = 60),
+  labs(title = str_wrap(str_to_upper(str_c("tasa mensual anualizada de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", en la ciudad de méxico", paste = "")), width = 80),
        subtitle = "Tasa por cada 100 mil habitantes",
        x = "\n",
        y = "Tasa mensual anualizada\n", 
@@ -108,7 +108,7 @@ datos_delito %>%
   geom_text(aes(label = round(tasa_x_100k, 2)), color = "white", vjust = 1.5, fontface = "bold", size = 5)  +
   scale_x_continuous(breaks = 2016:2019, labels = c("Ene. - mar. \'16", "Ene. - mar. \'17", "Ene. - mar. \'18", "Ene. - mar. \'19")) +
   scale_y_continuous(labels = comma, expand = c(0, 0)) +
-  labs(title = str_wrap(str_to_upper(str_c("tasa trimestral anualizada de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", en la ciudad de méxico", sep = "")), width = 60),
+  labs(title = str_wrap(str_to_upper(str_c("tasa trimestral anualizada de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", en la ciudad de méxico", sep = "")), width = 80),
        subtitle = "Tasa por cada 100 mil habitantes",
        x = NULL,
        y = NULL,
@@ -150,7 +150,7 @@ cambio_num_acumulado_delitos_alcaldia %>%
   scale_x_continuous(breaks = c(2018, 2019), labels = c("Ene. - mar. \'18\n", "Ene. - mar. \'19\n"), 
                      limits = c(2018, 2019.05)) +
   scale_color_manual(values = c("tomato", "#66bd63")) +
-  labs(title = str_wrap(str_to_upper(str_c("número acumulado de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", primer trimestre de 2019 vs. primer trimestre de 2018, por alcaldía", sep = "")), width = 57),
+  labs(title = str_wrap(str_to_upper(str_c("número acumulado de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", primer trimestre de 2019 vs. primer trimestre de 2018, por alcaldía", sep = "")), width = 78),
        subtitle = str_wrap("La gráfica muestra el cambio en el número de carpetas de investigación acumuladas en el primer trimestre de cada año", width = 95),
        x = NULL,
        y = "Número acumulado de\ncarpetas de investigación\n",
@@ -178,7 +178,7 @@ cambio_num_acumulado_delitos_alcaldia %>%
   scale_y_continuous(breaks = c(min(cambio_num_acumulado_delitos_alcaldia$cambio, na.rm = T), max(cambio_num_acumulado_delitos_alcaldia$cambio, na.rm = T)),
                      labels = c("Mejor", "Peor")) +
   scale_fill_manual(values = c("tomato", "#66bd63")) +
-  labs(title = str_wrap(str_to_upper(str_c("cambio en el número acumulado de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", primer trimestre de 2019 vs. primer trimestre de 2018, por alcaldía", sep = "")), width = 50),
+  labs(title = str_wrap(str_to_upper(str_c("cambio en el número acumulado de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", primer trimestre de 2019 vs. primer trimestre de 2018, por alcaldía", sep = "")), width = 78),
        subtitle = str_wrap("La gráfica muestra el cambio absoluto en el número de carpetas de investigación acumuladas en el primer trimestre de cada año", width = 85),
        x = NULL,
        y = "\nCambio en el número de carpetas de investigación\n",
@@ -221,7 +221,7 @@ datos_delito %>%
   scale_x_continuous(breaks = c(2018, 2019), labels = c("Ene. - mar. \'18\n", "Ene. - mar. \'19\n"), 
                      limits = c(2018, 2019.05)) +
   scale_color_manual(values = c("tomato", "#66bd63")) +
-  labs(title = str_wrap(str_to_upper(str_c("tasa trimestral anualizada de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", primer trimestre de 2019 vs. primer trimestre de 2018, por alcaldía", sep = "")), width = 57),
+  labs(title = str_wrap(str_to_upper(str_c("tasa trimestral anualizada de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", primer trimestre de 2019 vs. primer trimestre de 2018, por alcaldía", sep = "")), width = 80),
        subtitle = "Tasa por cada 100 mil habitantes",
        x = NULL,
        y = "Tasa trimestral anualizada\n",
@@ -273,7 +273,7 @@ bd_cdmx %>%
          color_geom = ifelse(categoria_de_delito == unique(datos_delito$categoria_de_delito), "a", "b")) %>% 
   ggplot(aes(x = fct_reorder(str_wrap(categoria_de_delito, width = 30), por), y = por, fill = color_geom)) +
   geom_col(alpha = 0.9) +
-  geom_text(aes(label = str_c(alcaldia, " (", round(por, 1), "%)", sep = "")), hjust = 1.05, color = "white", fontface = "bold", size = 3.5) +
+  geom_text(aes(label = str_c(alcaldia, " (", round(por, 1), "%)", sep = "")), hjust = 1.05, color = "white", fontface = "bold", size = 5) +
   coord_flip() +
   scale_y_continuous(expand = c(0, 0)) +
   scale_fill_manual(values = c("#a50300", "grey70")) +
@@ -283,7 +283,11 @@ bd_cdmx %>%
        y = "Porcentaje del total, por categoría de delito",
        caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
-  theme(legend.position = "none", 
+  theme(plot.title = element_text(size = 25), 
+        plot.subtitle = element_text(size = 18), 
+        plot.caption = element_text(size = 13),
+        axis.title.x = element_text(size = 18),
+        legend.position = "none", 
         panel.grid.major = element_blank(),
         axis.text.x = element_blank()) + 
   ggsave("03_graficas/lunes_violacion/08_concentracion_porcentual_ci_por_alcaldia.png", width = 13.5, height = 15, dpi = 200) 
@@ -313,7 +317,7 @@ datos_delito %>%
   geom_text(aes(label = etiqueta_carpetas_grande), hjust = 1.2, color = "white", fontface = "bold", size = 4) +
   geom_text(aes(label = etiqueta_carpetas_pequenio), hjust = -0.8, color = "grey40", fontface = "bold", size = 4) +
   coord_flip() +
-  labs(title = str_wrap(str_to_upper(str_c("número de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", por alcaldia", paste = "")), width = 50),
+  labs(title = str_wrap(str_to_upper(str_c("número de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", por alcaldia", paste = "")), width = 70),
        subtitle = str_wrap("Carpetas de investigación acumuladas entre el 1 enero de 2016 y el 31 de marzo de 2019", width = 90),
        x = NULL,
        y = "Número de carpetas\n",
@@ -350,7 +354,7 @@ datos_delito %>%
   geom_text(aes(label = etiqueta_tasas_grande), hjust = 1.2, color = "white", fontface = "bold", size = 4) +
   geom_text(aes(label = etiqueta_tasas_pequenio), hjust = -0.7, color = "grey40", fontface = "bold", size = 4) +
   coord_flip() +
-  labs(title = str_wrap(str_to_upper(str_c("tasa de carpetas de investigación por cada 100 mil habitantes por ", unique(datos_delito$categoria_de_delito), ", por alcaldia", paste = "")), width = 50),
+  labs(title = str_wrap(str_to_upper(str_c("tasa de carpetas de investigación por cada 100 mil habitantes por ", unique(datos_delito$categoria_de_delito), ", por alcaldia", paste = "")), width = 75),
        subtitle = str_wrap("Carpetas de investigación acumuladas entre el 1 enero de 2016 y el 31 de marzo de 2019", width = 90),
        x = NULL,
        y = "Tasa de carpetas por\ncada 100 mil habitantes\n",
@@ -398,14 +402,17 @@ top_20_colonias_por_delito %>%
   geom_col(fill = "#a50300", alpha = 0.9) +
   geom_text(aes(label = comma(num_carpetas)), color = "white", hjust = 1.5, fontface = "bold", size = 4) +
   scale_y_continuous(expand = c(0, 0), labels = comma) +
-  labs(title = str_wrap(str_to_upper(paste("las 20 colonias con el mayor número de carpetas de investigación por ", unique(top_20_colonias_por_delito$categoria_de_delito), sep = "")), width = 52),
+  labs(title = str_wrap(str_to_upper(paste("las 20 colonias con el mayor número de carpetas de investigación por ", unique(top_20_colonias_por_delito$categoria_de_delito), sep = "")), width = 50),
        subtitle = str_wrap(paste("Estas 20 colonias concentran el ", round(max(top_20_colonias_por_delito$por_acumulado_carpetas), 1), "% (", comma(max(top_20_colonias_por_delito$num_acumulado_carpetas)), ") de las ", comma(max(top_20_colonias_por_delito$num_total_carpetas)), " carpetas de investigación iniciadas por este delito entre el 1 de enero de 2016 y el 31 de marzo de 2019"  , sep = ""), width = 110), 
        x = NULL,
        y = NULL, 
        caption = "Fuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   coord_flip() +
   tema +
-  theme(panel.grid.major = element_blank(),
+  theme(plot.title = element_text(size = 24), 
+        plot.subtitle = element_text(size = 15), 
+        plot.caption = element_text(size = 13),
+        panel.grid.major = element_blank(),
         axis.text.x = element_blank(),
         axis.text.y = element_text(size = 10)) +
   ggsave(str_c("03_graficas/lunes_violacion/11_numero_acumulado_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_colonia.png", sep = ""), width = 13, height = 15, dpi = 200) 
@@ -454,7 +461,9 @@ faa %>%
        fill = "Núm. de carpetas\nde investigación",
        caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la Procuraduría General de Justicia de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
-  theme(panel.grid.major=element_line(colour = "transparent"),
+  theme(plot.title = element_text(size = 24), 
+        plot.subtitle = element_text(size = 15), 
+        plot.caption = element_text(size = 13),panel.grid.major=element_line(colour = "transparent"),
         axis.text = element_blank(),
         axis.title = element_blank(),
         legend.position = c(0.15, 0.6),
