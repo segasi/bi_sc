@@ -50,7 +50,7 @@ datos_delito %>%
   labs(title = str_wrap(str_to_upper(str_c("número de carpetas de investigación por ", unique(datos_delito$categoria_de_delito), ", acumulado diariamente en la ciudad de méxico", paste = "")), width = 55),
        subtitle = "Datos de enero de 2016 al 31 de marzo de 2019",
        x = "\nDías del año transcurridos",
-       y = "Número de carpetas informativas\n", 
+       y = "Número de carpetas de investigación\n", 
        caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40") +
   tema +
   theme(legend.position = "none") + 
