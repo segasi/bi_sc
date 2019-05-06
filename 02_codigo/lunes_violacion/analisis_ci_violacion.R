@@ -24,7 +24,7 @@ datos_delito %>%
   tema +
   theme(axis.text.y = element_blank(), 
         panel.grid = element_blank()) + 
-  ggsave(str_c("03_graficas/lunes_violacion/01_frecuencia_dia_semana_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 13, height = 8, dpi = 200)
+  ggsave(str_c("03_graficas/lunes/violacion/01_frecuencia_dia_semana_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 13, height = 8, dpi = 200)
 
 
 ### Gráfica del número de carpetas de investigación por violáción acumulado diariamente en la CDMX cada año entre 2016 y 2019 ----
@@ -54,7 +54,7 @@ datos_delito %>%
        caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la Ciudad de México.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40") +
   tema +
   theme(legend.position = "none") + 
-  ggsave(str_c("03_graficas/lunes_violacion/02_frecuencia_ci_acumulada_diariamente_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 12, height = 8, dpi = 200)
+  ggsave(str_c("03_graficas/lunes/violacion/02_frecuencia_ci_acumulada_diariamente_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 12, height = 8, dpi = 200)
 
 
 ### Gráfica de la tasa mensual anualizada de CI por violación ----
@@ -90,7 +90,7 @@ datos_delito %>%
        caption = "\nFuente: Agencia Digital de Innovación Pública de la CDMX con datos de la PGJ de la CDMX y proyecciones poblacionales de CONAPO.\nElaborado por Sebastián Garrido de Sierra (@segasi) para ADN40.") +
   tema +
   theme(legend.position = "none") + 
-  ggsave(str_c("03_graficas/lunes_violacion/03_tasa_mensual_anualizada_de_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 12, height = 8, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/03_tasa_mensual_anualizada_de_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 12, height = 8, dpi = 200) 
 
 
 ### Gráfica de la tasa trimenstral anualizada de CI por violación ----
@@ -116,7 +116,7 @@ datos_delito %>%
   tema +
   theme(axis.text.y = element_blank(), 
         panel.grid = element_blank()) + 
-  ggsave(str_c("03_graficas/lunes_violacion/04_tasa_trimestral_anualizada_de_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 12, height = 8, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/04_tasa_trimestral_anualizada_de_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),".png", sep = ""), width = 12, height = 8, dpi = 200) 
 
 
 
@@ -158,7 +158,7 @@ cambio_num_acumulado_delitos_alcaldia %>%
   tema +
   theme(panel.grid.major.x = element_blank(),
         legend.position = "none") + 
-  ggsave(str_c("03_graficas/lunes_violacion/05_cambio_numero_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_1T_2018_vs_1T_2019_por_alcaldia.png", sep = ""), width = 12, height = 8, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/05_cambio_numero_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_1T_2018_vs_1T_2019_por_alcaldia.png", sep = ""), width = 12, height = 8, dpi = 200) 
 
 
 ### Cambio en el número acumulado de CI por violación en el 1T de 2019 vs. 1T de 2018, por alcaldía----
@@ -188,7 +188,7 @@ cambio_num_acumulado_delitos_alcaldia %>%
         legend.position = "none",
         axis.title.x = element_blank(),
         axis.text.x = element_text(face = "bold", size = 15)) + 
-  ggsave(str_c("03_graficas/lunes_violacion/06_cambio_absoluto_numero_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_1T_2018_vs_1T_2019_por_alcaldia.png", sep = ""), width = 12, height = 10, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/06_cambio_absoluto_numero_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_1T_2018_vs_1T_2019_por_alcaldia.png", sep = ""), width = 12, height = 10, dpi = 200) 
 
 
 ### Cambio en la tasa trimestral anualizada de CI en el 1T de 2018 vs. el 1T 2019, por alcaldía ----
@@ -229,7 +229,7 @@ datos_delito %>%
   tema +
   theme(panel.grid.major.x = element_blank(),
         legend.position = "none") + 
-  ggsave(str_c("03_graficas/lunes_violacion/07_tasa_trimestral_anualizada_de_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_1T_2018_vs_1T_2019_por_alcaldia.png", sep = ""), width = 12, height = 10, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/07_tasa_trimestral_anualizada_de_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_1T_2018_vs_1T_2019_por_alcaldia.png", sep = ""), width = 12, height = 10, dpi = 200) 
 
 
 ### Gráfica de la concentracion porcentual de CI por delito y alcaldía ----
@@ -290,7 +290,7 @@ bd_cdmx %>%
         legend.position = "none", 
         panel.grid.major = element_blank(),
         axis.text.x = element_blank()) + 
-  ggsave("03_graficas/lunes_violacion/08_concentracion_porcentual_ci_por_alcaldia.png", width = 13.5, height = 15, dpi = 200) 
+  ggsave("03_graficas/lunes/violacion/08_concentracion_porcentual_ci_por_alcaldia.png", width = 13.5, height = 15, dpi = 200) 
 
 
 ### Gráfica del número de CI iniciadas por la categoría de delito seleccionada al comienzo del script para todo el período analizado ----
@@ -325,7 +325,7 @@ datos_delito %>%
   tema +
   theme(axis.text.x = element_blank(),
         panel.grid.major = element_blank()) +
-  ggsave(str_c("03_graficas/lunes_violacion/09_numero_total_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_alcaldia.png", sep = ""), width = 12, height = 10, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/09_numero_total_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_alcaldia.png", sep = ""), width = 12, height = 10, dpi = 200) 
   
   
   
@@ -362,7 +362,7 @@ datos_delito %>%
   tema +
   theme(axis.text.x = element_blank(),
         panel.grid.major = element_blank()) +
-  ggsave(str_c("03_graficas/lunes_violacion/10_tasa_por_cada_100_mil_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_alcaldia.png", sep = ""), width = 12, height = 10, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/10_tasa_por_cada_100_mil_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_alcaldia.png", sep = ""), width = 12, height = 10, dpi = 200) 
 
 
 ### Gráfica de las 20 colonias con más CI iniciadas iniciadas en todo el período analizado por la categoría de delito seleccionada al comienzo del script ----
@@ -415,7 +415,7 @@ top_20_colonias_por_delito %>%
         panel.grid.major = element_blank(),
         axis.text.x = element_blank(),
         axis.text.y = element_text(size = 10)) +
-  ggsave(str_c("03_graficas/lunes_violacion/11_numero_acumulado_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_colonia.png", sep = ""), width = 13, height = 15, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/11_numero_acumulado_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_colonia.png", sep = ""), width = 13, height = 15, dpi = 200) 
 
 
 ### Mapa de las CI iniciadas iniciadas en todo el período analizado por la categoría de delito seleccionada al comienzo del script ----
@@ -470,4 +470,4 @@ faa %>%
         legend.title = element_text(face = "bold", size = 13),
         legend.text = element_text(face = "bold", size = 11),
         legend.key.height = unit(1.5, "cm"))  +
-  ggsave(str_c("03_graficas/lunes_violacion/12_mapa_numero_acumulado_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_alcaldia.png", sep = ""), width = 13, height = 13, dpi = 200) 
+  ggsave(str_c("03_graficas/lunes/violacion/12_mapa_numero_acumulado_ci_por_", str_replace_all(str_to_lower(unique(datos_delito$categoria_de_delito)), " ", ""),"_por_alcaldia.png", sep = ""), width = 13, height = 13, dpi = 200) 
