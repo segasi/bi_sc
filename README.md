@@ -4,7 +4,7 @@
 
 En este repositorio encontrarás los datos, código y gráficas que utilicé durante el análisis de la [base de datos](https://datos.cdmx.gob.mx/explore/dataset/carpetas-de-investigacion-pgj-cdmx/table/) de carpetas de investigación de delitos de la PGJ de la CDMX, con corte a marzo de 2019, publicada por la [Agencia Digital de Innovación Pública](https://adip.cdmx.gob.mx/) (ADIP).
 
-Los resultados de este análisis fueron uno de los insumos que utilizó el equipo del Buró de Información de [ADN40](https://www.adn40.mx/) para la elaboración de los diferentes reportajes de la Semana del Crimen.
+Los resultados de este análisis fueron uno de los insumos que utilizó el equipo del Buró de Investigaciones de [ADN40](https://www.adn40.mx/) para la elaboración de los diferentes reportajes de la Semana del Crimen.
 
 Cada día de la semana del 6 al 11 de mayor iré subiendo el código y las gráficas relacionadas con los reportajes aparecidos ese día. El domingo 12 de mayo subiré un par de scripts que permiten generar reportes uniformes para cada tipo de categoría de delito.
 
