@@ -1,8 +1,8 @@
 # Análisis de las carpetas de investigación de delitos de la PGJ de la CDMX
 
-![My image](https://github.com/segasi/bi_sc/blob/master/03_graficas/03_miercoles/02_frecuencia_ci_acumulada_diariamente_por_robo_a_pasajero_a_bordo_de_microbus%2C_con_y_sin_violencia.png)
+![My image]https://github.com/segasi/bi_sc/blob/master/03_graficas/04_jueves/02_frecuencia_ci_acumulada_diariamente_por_robo_a_negocio%2C_con_violencia.png)
 
-En este repositorio encontrarás los datos, código y gráficas que utilicé durante el análisis de la [base de datos](https://datos.cdmx.gob.mx/explore/dataset/carpetas-de-investigacion-pgj-cdmx/table/) de carpetas de investigación de delitos de la PGJ de la CDMX, con corte a marzo de 2019, publicada por la [Agencia Digital de Innovación Pública](https://adip.cdmx.gob.mx/) (ADIP).
+En este repositorio encontrarás los datos, código y gráficas que utilicé durante el análisis de la [base de datos]("https://datos.cdmx.gob.mx/explore/dataset/carpetas-de-investigacion-pgj-cdmx/table/") de carpetas de investigación de delitos de la PGJ de la CDMX, con corte a marzo de 2019, publicada por la [Agencia Digital de Innovación Pública](https://adip.cdmx.gob.mx/) (ADIP).
 
 Los resultados de este análisis fueron uno de los insumos que utilizó el equipo del Buró de Investigaciones de [ADN40](https://www.adn40.mx/) para la elaboración de los diferentes reportajes de la Semana del Crimen.
 
