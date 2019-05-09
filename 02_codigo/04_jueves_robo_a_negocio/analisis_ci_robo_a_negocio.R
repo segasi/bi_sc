@@ -1,7 +1,8 @@
 ### Importar y preprocesar datos ----
 # source("02_codigo/cargar_preparar_datos_carpetas_investigacion.R")
 
-### Generar subconjunto de la base de datos que sólo contenga los datos de carpetas de investigación (CI) de la categoría de delito violación ----
+### Generar subconjunto de la base de datos que sólo contenga los datos de carpetas de investigación (CI) de la categoría de delito de robo a negocio, con violencia ----
+
 # Selección de categoría de delito para hacer informes
 datos_delito <- 
   bd_cdmx %>% 
